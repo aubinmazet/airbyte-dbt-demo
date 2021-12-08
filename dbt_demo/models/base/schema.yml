@@ -1,0 +1,12 @@
+
+version: 2
+
+models:
+  - name: covid
+    description: "raw data of covid in France"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
