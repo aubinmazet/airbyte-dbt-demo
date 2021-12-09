@@ -3,7 +3,7 @@ locals {
   zone                  = "europe-north1-a"
   airbyte_machine_type  = "e2-small"
   source_datasets = {
-    test-dataset = "test dataset"
+    covid = "dataset with french covid data"
   }
 }
 
