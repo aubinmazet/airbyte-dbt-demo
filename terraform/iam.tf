@@ -7,3 +7,12 @@ resource "google_project_iam_binding" "sa_iam_bindings" {
     "serviceAccount:${google_service_account.dbt_sa.email}",
   ]
 }
+
+resource "google_project_iam_binding" "sa_iam_bindings_bucket" {
+  project = var.project_id
+  role    = "roles/storage.admin"
+
+  members = [
+    "serviceAccount:${google_service_account.airbyte_sa.email}",
+  ]
+}
